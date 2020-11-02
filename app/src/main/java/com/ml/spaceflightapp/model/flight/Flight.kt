@@ -3,15 +3,13 @@ package com.ml.spaceflightapp.model.flight
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
 /**
- * Class is used to retrieve flight data from the API
+ * Class is used to represent flight data
  */
-@Entity
+
 data class Flight (
 
-	@PrimaryKey(autoGenerate = true) val flightId: Int,
 	@SerializedName("fairings") val fairings : Fairings,
 	@SerializedName("links") val links : Links,
 	@SerializedName("static_fire_date_utc") val static_fire_date_utc : String,
@@ -38,4 +36,15 @@ data class Flight (
 	@SerializedName("upcoming") val upcoming : Boolean,
 	@SerializedName("cores") val cores : List<Cores>,
 	@SerializedName("id") val id : String
+)
+
+/**
+ * Class is used to retrieve flight data from the API
+ */
+
+@Entity
+
+data class FlightResponse(
+	@PrimaryKey val flightResponseId: Int = 1,
+	val flightReponse: List<Flight>
 )
