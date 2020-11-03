@@ -39,11 +39,10 @@ data class Flight (
 )
 
 /**
- * Class is used to retrieve flight data from the API
+ * Class is used to store Flight data to the local Room database
  */
 
 @Entity
-
 data class FlightResponse(
 	@PrimaryKey val flightResponseId: Int = 1,
 	val flightReponse: List<Flight>
