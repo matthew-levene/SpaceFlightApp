@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SpaceFlightApp</string>
+    <string name="falcon_9_launches_text">Falcon 9 Launches</string>
 </resources>
